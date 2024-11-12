@@ -5,104 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BaavPodhu.me | Your Digital Playground</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMyW7Jl9A1Ce1DtM1nxDD2A5Y+ye/HRp6m0Bt3Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
   <style>
     /* Custom Styling */
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff5e62, #ff9966);
-      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      line-height: 1.6;
     }
-
     .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: #343a40;
     }
-
     .hero {
       min-height: 100vh;
+      background: url('https://images.pexels.com/photos/3760810/pexels-photo-3760810.jpeg') center center/cover no-repeat;
+      color: #fff;
+      text-align: center;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      text-align: center;
-      padding: 3rem;
-      color: #fff;
-      background: url('https://via.placeholder.com/1500x800') center center/cover no-repeat;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      color: #eaeaea;
-      margin-bottom: 2rem;
-    }
-
-    .hero .btn-primary {
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-      border-radius: 50px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .features, .contact-form, .gallery, .testimonials {
-      padding: 3rem 1rem;
-      color: #333;
-    }
-
-    .features h2, .contact-form h2, .gallery h2, .testimonials h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-weight: bold;
-    }
-
-    .features .card, .advantages .card, .gallery .card {
-      border: none;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 15px;
+      align-items: center;
+      padding: 2rem;
       overflow: hidden;
-      transition: transform 0.3s;
     }
-
-    .features .card:hover, .advantages .card:hover {
-      transform: translateY(-5px);
+    .features, .contact-form, .gallery, .testimonials, .footer {
+      padding: 3rem 1rem;
     }
-
-    .testimonials .carousel-item {
-      text-align: center;
-    }
-
-    .testimonials .carousel-item img {
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-
-    .contact-form .form-control {
-      border-radius: 20px;
-    }
-
-    .footer {
-      background-color: #333;
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
+    .features .card, .gallery img, .testimonials .carousel-item, .contact-form .form-control {
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">BaavPodhu.me</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,35 +60,35 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero d-flex flex-column justify-content-center align-items-center">
+  <section class="hero">
     <h1>Welcome to BaavPodhu.me</h1>
-    <p>Discover a new way to connect with the digital world.</p>
-    <a href="#features" class="btn btn-primary mt-3">Explore Features</a>
+    <p>Explore your digital playground</p>
+    <a href="#features" class="btn btn-primary btn-lg mt-3">Explore Features</a>
   </section>
 
   <!-- Features Section -->
-  <section id="features" class="features bg-light text-dark py-5">
+  <section id="features" class="features">
     <div class="container">
-      <h2>Our Features</h2>
-      <div class="row">
+      <h2 class="text-center">Our Features</h2>
+      <div class="row mt-4">
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <i class="fas fa-bolt fa-3x text-primary mb-3"></i>
-            <h5 class="card-title">Fast Performance</h5>
+            <img src="https://images.pexels.com/photos/4226592/pexels-photo-4226592.jpeg" class="img-fluid mb-3" alt="Performance">
+            <h5>Fast Performance</h5>
             <p>Optimized for high-speed performance and fast loading times.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
-            <h5 class="card-title">Responsive Design</h5>
+            <img src="https://images.pexels.com/photos/4226592/pexels-photo-4226592.jpeg" class="img-fluid mb-3" alt="Responsive Design">
+            <h5>Responsive Design</h5>
             <p>Beautiful and responsive on any device or screen size.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <i class="fas fa-lock fa-3x text-primary mb-3"></i>
-            <h5 class="card-title">Secure</h5>
+            <img src="https://images.pexels.com/photos/5077040/pexels-photo-5077040.jpeg" class="img-fluid mb-3" alt="Secure">
+            <h5>Secure</h5>
             <p>State-of-the-art security to protect your data and privacy.</p>
           </div>
         </div>
@@ -157,29 +97,29 @@
   </section>
 
   <!-- Gallery Section -->
-  <section id="gallery" class="gallery text-dark py-5">
+  <section id="gallery" class="gallery bg-light text-dark py-5">
     <div class="container">
-      <h2>Gallery</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded"></div>
-        <div class="col-md-4 mb-4"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded"></div>
-        <div class="col-md-4 mb-4"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded"></div>
+      <h2 class="text-center">Gallery</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4"><img src="https://images.pexels.com/photos/2917623/pexels-photo-2917623.jpeg" class="img-fluid rounded" alt="Tech Image"></div>
+        <div class="col-md-4 mb-4"><img src="https://images.pexels.com/photos/4391461/pexels-photo-4391461.jpeg" class="img-fluid rounded" alt="Web Design"></div>
+        <div class="col-md-4 mb-4"><img src="https://images.pexels.com/photos/4391451/pexels-photo-4391451.jpeg" class="img-fluid rounded" alt="Creative Image"></div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials bg-light text-dark py-5">
+  <section id="testimonials" class="testimonials text-dark py-5">
     <div class="container">
-      <h2>Testimonials</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <h2 class="text-center">Testimonials</h2>
+      <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active text-center">
-            <img src="https://via.placeholder.com/80" class="d-block mx-auto rounded-circle mb-3" alt="...">
+            <img src="https://images.pexels.com/photos/4391451/pexels-photo-4391451.jpeg" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
             <p>"BaavPodhu.me has transformed the way we work!"</p>
           </div>
           <div class="carousel-item text-center">
-            <img src="https://via.placeholder.com/80" class="d-block mx-auto rounded-circle mb-3" alt="...">
+            <img src="https://images.pexels.com/photos/4391451/pexels-photo-4391451.jpeg" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
             <p>"Incredible experience and seamless design."</p>
           </div>
         </div>
@@ -194,27 +134,22 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-form bg-dark text-light py-5">
+  <section id="contact" class="contact-form bg-light text-dark py-5">
     <div class="container">
-      <h2>Contact Us</h2>
-      <form>
+      <h2 class="text-center">Get in Touch</h2>
+      <form class="mt-4">
         <div class="row mb-3">
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6">
-            <input type="email" class="form-control" placeholder="Your Email" required>
-          </div>
+          <div class="col-md-6"><input type="text" class="form-control" placeholder="Your Name" required></div>
+          <div class="col-md-6"><input type="email" class="form-control" placeholder="Your Email" required></div>
         </div>
-        <input type="text" class="form-control mb-3" placeholder="Subject" required>
         <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
         <button type="submit" class="btn btn-primary w-100">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer class="footer bg-dark text-light py-4">
+  <!-- Footer -->
+  <footer class="footer py-3">
     <div class="container">
       <p>&copy; 2024 BaavPodhu.me. All Rights Reserved.</p>
       <div>
