@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BaavPodhu.me | Your Digital Playground</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMyW7Jl9A1Ce1DtM1nxDD2A5Y+ye/HRp6m0Bt3Z" crossorigin="anonymous">
   <style>
     /* Custom Styling */
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ff5e62, #ff9966);
       color: #fff;
-      overflow-x: hidden;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
     .hero {
@@ -20,12 +24,14 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 3rem;
+      color: #fff;
+      background: url('https://via.placeholder.com/1500x800') center center/cover no-repeat;
     }
 
     .hero h1 {
       font-size: 3.5rem;
       font-weight: bold;
-      color: #fff;
       margin-bottom: 1rem;
     }
 
@@ -42,19 +48,18 @@
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .features, .contact-form {
+    .features, .contact-form, .gallery, .testimonials {
       padding: 3rem 1rem;
-      background-color: #fff;
       color: #333;
     }
 
-    .features h2, .contact-form h2 {
+    .features h2, .contact-form h2, .gallery h2, .testimonials h2 {
       text-align: center;
       margin-bottom: 2rem;
       font-weight: bold;
     }
 
-    .features .card, .advantages .card {
+    .features .card, .advantages .card, .gallery .card {
       border: none;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: 15px;
@@ -66,15 +71,24 @@
       transform: translateY(-5px);
     }
 
-    .advantages {
-      padding: 3rem 1rem;
+    .testimonials .carousel-item {
+      text-align: center;
     }
 
-    footer {
-      background: #333;
+    .testimonials .carousel-item img {
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form .form-control {
+      border-radius: 20px;
+    }
+
+    .footer {
+      background-color: #333;
       color: #fff;
-      text-align: center;
       padding: 2rem 0;
+      text-align: center;
     }
 
     /* Responsive Design */
@@ -87,76 +101,102 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero bg-primary text-light">
-    <div class="container text-center">
-      <h1>Welcome to BaavPodhu.me</h1>
-      <p>Your next digital adventure awaits. Stay tuned for something amazing!</p>
-      <a href="#features" class="btn btn-primary">Explore More</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">BaavPodhu.me</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex flex-column justify-content-center align-items-center">
+    <h1>Welcome to BaavPodhu.me</h1>
+    <p>Discover a new way to connect with the digital world.</p>
+    <a href="#features" class="btn btn-primary mt-3">Explore Features</a>
   </section>
 
   <!-- Features Section -->
-  <section id="features" class="features">
+  <section id="features" class="features bg-light text-dark py-5">
     <div class="container">
-      <h2>Exciting Features</h2>
+      <h2>Our Features</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <div class="card text-center p-4">
-            <img src="https://via.placeholder.com/80" class="card-img-top mx-auto" alt="Feature 1">
-            <div class="card-body">
-              <h5 class="card-title">Modern Design</h5>
-              <p class="card-text">Experience sleek, modern aesthetics designed to make your digital journey enjoyable.</p>
-            </div>
+          <div class="card p-4 text-center">
+            <i class="fas fa-bolt fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Fast Performance</h5>
+            <p>Optimized for high-speed performance and fast loading times.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card text-center p-4">
-            <img src="https://via.placeholder.com/80" class="card-img-top mx-auto" alt="Feature 2">
-            <div class="card-body">
-              <h5 class="card-title">Fast & Responsive</h5>
-              <p class="card-text">Access from any device with ultra-fast loading times and a fully responsive layout.</p>
-            </div>
+          <div class="card p-4 text-center">
+            <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Responsive Design</h5>
+            <p>Beautiful and responsive on any device or screen size.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card text-center p-4">
-            <img src="https://via.placeholder.com/80" class="card-img-top mx-auto" alt="Feature 3">
-            <div class="card-body">
-              <h5 class="card-title">User Friendly</h5>
-              <p class="card-text">Navigate with ease and enjoy an intuitive design built just for you.</p>
-            </div>
+          <div class="card p-4 text-center">
+            <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+            <h5 class="card-title">Secure</h5>
+            <p>State-of-the-art security to protect your data and privacy.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Advantages Section -->
-  <section class="advantages bg-light text-dark">
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery text-dark py-5">
     <div class="container">
-      <h2>Why Choose Us?</h2>
+      <h2>Gallery</h2>
       <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="card p-4 text-center">
-            <h5 class="card-title">Enhanced Security</h5>
-            <p class="card-text">Your data is safe with industry-leading security measures protecting every interaction.</p>
+        <div class="col-md-4 mb-4"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded"></div>
+        <div class="col-md-4 mb-4"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded"></div>
+        <div class="col-md-4 mb-4"><img src="https://via.placeholder.com/300x200" class="img-fluid rounded"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials bg-light text-dark py-5">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <img src="https://via.placeholder.com/80" class="d-block mx-auto rounded-circle mb-3" alt="...">
+            <p>"BaavPodhu.me has transformed the way we work!"</p>
+          </div>
+          <div class="carousel-item text-center">
+            <img src="https://via.placeholder.com/80" class="d-block mx-auto rounded-circle mb-3" alt="...">
+            <p>"Incredible experience and seamless design."</p>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="card p-4 text-center">
-            <h5 class="card-title">24/7 Support</h5>
-            <p class="card-text">Our team is here to help, anytime you need it, day or night.</p>
-          </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact-form bg-white text-dark">
+  <section id="contact" class="contact-form bg-dark text-light py-5">
     <div class="container">
-      <h2>Get in Touch</h2>
+      <h2>Contact Us</h2>
       <form>
         <div class="row mb-3">
           <div class="col-md-6">
@@ -166,18 +206,23 @@
             <input type="email" class="form-control" placeholder="Your Email" required>
           </div>
         </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success w-100">Send Message</button>
+        <input type="text" class="form-control mb-3" placeholder="Subject" required>
+        <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Footer Section -->
+  <footer class="footer bg-dark text-light py-4">
     <div class="container">
-      <p>© 2024 BaavPodhu.me - All Rights Reserved</p>
+      <p>&copy; 2024 BaavPodhu.me. All Rights Reserved.</p>
+      <div>
+        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
   </footer>
 
