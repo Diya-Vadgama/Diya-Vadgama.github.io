@@ -1,180 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BaavPodhu.me | Your Digital Playground</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
-  <style>
-    /* Custom Styling */
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f8f9fa;
-      color: #343a40;
-      line-height: 1.6;
-    }
-    .navbar {
-      background-color: #343a40;
-    }
-    .hero {
-      min-height: 100vh;
-      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      overflow: hidden;
-    }
-    .features, .contact-form, .gallery, .testimonials, .cta, .footer {
-      padding: 3rem 1rem;
-    }
-    .features .card, .gallery img, .testimonials .carousel-item, .contact-form .form-control {
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .cta {
-      background-color: #343a40;
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Diyuuu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ff6f61, #ffb3b3);
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-section h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeIn 1.5s ease-in-out;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .btn-custom {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 15px 25px rgba(255, 111, 97, 0.2);
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff4d3d;
+            box-shadow: 0 20px 40px rgba(255, 111, 97, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* Apology Section */
+        .apology-section {
+            background-color: white;
+            padding: 80px 20px;
+            margin-top: -60px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .highlight-text {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+            transition: all 0.5s ease;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-card p {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .testimonial-card h5 {
+            color: #ff6f61;
+            margin-top: 20px;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222222;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Heart Icon Effect */
+        .heart-icon {
+            font-size: 5rem;
+            position: fixed;
+            right: 15px;
+            bottom: 5%;
+            z-index: 9999;
+            color: #ff6f61;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .heart-icon:hover {
+            transform: scale(1.3);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Floating Heart Animation */
+        .heart-animation {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8rem;
+            color: #ff6f61;
+            opacity: 0.8;
+            animation: floatUp 4s ease-in-out infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 0.6;
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-15px) scale(1.3);
+            }
+
+            100% {
+                opacity: 0.6;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">BaavPodhu.me</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to BaavPodhu.me</h1>
-    <p>Explore your digital playground</p>
-    <a href="#features" class="btn btn-primary btn-lg mt-3">Explore Features</a>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <div class="container">
-      <h2 class="text-center">Our Features</h2>
-      <div class="row mt-4">
-        <div class="col-md-4 mb-4">
-          <div class="card p-4 text-center">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Performance">
-            <h5>Fast Performance</h5>
-            <p>Optimized for high-speed performance and fast loading times.</p>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Sorry Diyuuu! 💖</h1>
+            <p>Your love means the world to me, and I am deeply sorry for today. Let's make it right together.</p>
+            <a href="#apology" class="btn btn-custom">I Am Truly Sorry</a>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card p-4 text-center">
-            <img src="https://images.unsplash.com/photo-1587613990000-5c31e95ee6d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Responsive Design">
-            <h5>Responsive Design</h5>
-            <p>Beautiful and responsive on any device or screen size.</p>
-          </div>
+    </section>
+
+    <!-- Apology Section -->
+    <section class="apology-section" id="apology">
+        <div class="container">
+            <h2 class="text-center mb-4">My Heartfelt Apology</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="lead">
+                        Sorry <span class="highlight-text">Diyuuu</span> for today's behaviour, my actions were not up to my standards. (Note: I’m typing this in a mix of Gujarati + English). Mne nathi saru dhingu 🐣🥲 mne bov stress ane depression Thai che. Mne bov j taav che nd tonsils pan che. Hu past days thin bov stress ma chu. Maru kyai Maan nathi lagtu, Kai karva nu Maan nathi thatu bus Khali regret Thai che Mane Maru. Idk hu su Karu ik ke hu bovj change Thai gayo chu coz of various reasons 🥲.
+                    </p>
+                    <p class="lead">
+                        Hu roj rate tel lagavi ne suv chu coz atlu mathu dhuktu hoi and all. Nd loko pan mne ek ne ek j vastu repeate kre che k hu badlai gayo chu, hu Ava chu, hu tevu chu khabar nai avu lge che k koi ne hu nathi gamto. I am just lost in space somewhere where nobody can find me, not even myself 🥲. And due to all this things I am not well ❤️‍🩹.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-custom">Please Forgive Me</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card p-4 text-center">
-            <img src="https://images.unsplash.com/photo-1587698505098-0bf27f3d539f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Secure">
-            <h5>Secure</h5>
-            <p>State-of-the-art security to protect your data and privacy.</p>
-          </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Your Forgiveness Means Everything</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <p>"I know I haven't been myself lately, and this apology comes from the heart. Please understand that I'm working through a lot."</p>
+                        <h5>- Harshil</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery bg-light text-dark py-5">
-    <div class="container">
-      <h2 class="text-center">Gallery</h2>
-      <div class="row mt-4">
-        <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Tech Image"></div>
-        <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1593476123056-9f27367d730d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Web Design"></div>
-        <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Creative Image"></div>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Harshil Anuwadia | All Rights Reserved | <a href="mailto:harshilanuwadia@braindrop.me">Contact Me</a></p>
+    </footer>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials text-dark py-5">
-    <div class="container">
-      <h2 class="text-center">Testimonials</h2>
-      <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active text-center">
-            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
-            <p>"BaavPodhu.me has transformed the way we work!"</p>
-            <p class="fw-bold">- John Doe, CEO</p>
-          </div>
-          <div class="carousel-item text-center">
-            <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
-            <p>"Incredible experience and seamless design."</p>
-            <p class="fw-bold">- Jane Smith, Designer</p>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
+    <!-- Floating Heart Icon -->
+    <div class="heart-icon">
+        <i class="fas fa-heart"></i>
     </div>
-  </section>
 
-  <!-- Call-to-Action Section -->
-  <section class="cta">
-    <div class="container text-center">
-      <h2 class="mb-4">Ready to explore?</h2>
-      <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+    <!-- Floating Heart Animation -->
+    <div class="heart-animation">
+        <i class="fas fa-heart"></i>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-form bg-light text-dark py-5">
-    <div class="container">
-      <h2 class="text-center">Get in Touch</h2>
-      <form class="mt-4">
-        <div class="row mb-3">
-          <div class="col-md-6"><input type="text" class="form-control" placeholder="Your Name" required></div>
-          <div class="col-md-6"><input type="email" class="form-control" placeholder="Your Email" required></div>
-        </div>
-        <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
-        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer py-3">
-    <div class="container">
-      <p>&copy; 2024 BaavPodhu.me. All Rights Reserved.</p>
-      <div>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
