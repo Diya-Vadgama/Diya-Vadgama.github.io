@@ -20,7 +20,7 @@
     }
     .hero {
       min-height: 100vh;
-      background: url('https://images.pexels.com/photos/3760810/pexels-photo-3760810.jpeg') center center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center center/cover no-repeat;
       color: #fff;
       text-align: center;
       display: flex;
@@ -30,12 +30,16 @@
       padding: 2rem;
       overflow: hidden;
     }
-    .features, .contact-form, .gallery, .testimonials, .footer {
+    .features, .contact-form, .gallery, .testimonials, .cta, .footer {
       padding: 3rem 1rem;
     }
     .features .card, .gallery img, .testimonials .carousel-item, .contact-form .form-control {
       border-radius: 10px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .cta {
+      background-color: #343a40;
+      color: #fff;
     }
   </style>
 </head>
@@ -73,21 +77,21 @@
       <div class="row mt-4">
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <img src="https://images.pexels.com/photos/4226592/pexels-photo-4226592.jpeg" class="img-fluid mb-3" alt="Performance">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Performance">
             <h5>Fast Performance</h5>
             <p>Optimized for high-speed performance and fast loading times.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <img src="https://images.pexels.com/photos/4226592/pexels-photo-4226592.jpeg" class="img-fluid mb-3" alt="Responsive Design">
+            <img src="https://images.unsplash.com/photo-1587613990000-5c31e95ee6d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Responsive Design">
             <h5>Responsive Design</h5>
             <p>Beautiful and responsive on any device or screen size.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <img src="https://images.pexels.com/photos/5077040/pexels-photo-5077040.jpeg" class="img-fluid mb-3" alt="Secure">
+            <img src="https://images.unsplash.com/photo-1587698505098-0bf27f3d539f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Secure">
             <h5>Secure</h5>
             <p>State-of-the-art security to protect your data and privacy.</p>
           </div>
@@ -101,9 +105,9 @@
     <div class="container">
       <h2 class="text-center">Gallery</h2>
       <div class="row mt-4">
-        <div class="col-md-4 mb-4"><img src="https://images.pexels.com/photos/2917623/pexels-photo-2917623.jpeg" class="img-fluid rounded" alt="Tech Image"></div>
-        <div class="col-md-4 mb-4"><img src="https://images.pexels.com/photos/4391461/pexels-photo-4391461.jpeg" class="img-fluid rounded" alt="Web Design"></div>
-        <div class="col-md-4 mb-4"><img src="https://images.pexels.com/photos/4391451/pexels-photo-4391451.jpeg" class="img-fluid rounded" alt="Creative Image"></div>
+        <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Tech Image"></div>
+        <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1593476123056-9f27367d730d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Web Design"></div>
+        <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Creative Image"></div>
       </div>
     </div>
   </section>
@@ -115,12 +119,14 @@
       <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active text-center">
-            <img src="https://images.pexels.com/photos/4391451/pexels-photo-4391451.jpeg" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
+            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
             <p>"BaavPodhu.me has transformed the way we work!"</p>
+            <p class="fw-bold">- John Doe, CEO</p>
           </div>
           <div class="carousel-item text-center">
-            <img src="https://images.pexels.com/photos/4391451/pexels-photo-4391451.jpeg" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
+            <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
             <p>"Incredible experience and seamless design."</p>
+            <p class="fw-bold">- Jane Smith, Designer</p>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
@@ -130,6 +136,14 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
       </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="cta">
+    <div class="container text-center">
+      <h2 class="mb-4">Ready to explore?</h2>
+      <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
     </div>
   </section>
 
