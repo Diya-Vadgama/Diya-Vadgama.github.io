@@ -3,176 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BaavPodhu.me | Your Next Digital Destination</title>
+  <title>BaavPodhu.me | Your Digital Playground</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Custom Styling */
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      padding: 1em;
-    }
-
-    .container {
-      max-width: 800px;
-      background: #fff;
-      padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #333;
-    }
-
-    p {
-      color: #666;
-      text-align: center;
-      margin-bottom: 1em;
-    }
-
-    .btn {
-      padding: 0.8em 2em;
-      font-size: 1em;
+      background: linear-gradient(135deg, #ff5e62, #ff9966);
       color: #fff;
-      background-color: #ff6b6b;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-      display: block;
-      margin: 1em auto;
+      overflow-x: hidden;
     }
 
-    .btn:hover {
-      background-color: #ff4e4e;
-    }
-
-    .features, .advantages {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1em;
-      margin-top: 1.5em;
-    }
-
-    .features div, .advantages div {
-      background-color: #f8f8f8;
-      padding: 1em;
-      border-radius: 8px;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #eaeaea;
+      margin-bottom: 2rem;
+    }
+
+    .hero .btn-primary {
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 50px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .features, .contact-form {
+      padding: 3rem 1rem;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .features h2, .contact-form h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+
+    .features .card, .advantages .card {
+      border: none;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .features .card:hover, .advantages .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .advantages {
+      padding: 3rem 1rem;
     }
 
     footer {
-      text-align: center;
-      margin-top: 2em;
-      font-size: 0.9em;
-      color: #777;
-    }
-
-    .contact-form {
-      margin-top: 2em;
-      text-align: center;
-    }
-
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 0.8em;
-      margin: 0.5em 0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    .contact-form button {
-      padding: 0.8em 2em;
-      font-size: 1em;
+      background: #333;
       color: #fff;
-      background-color: #4CAF50;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
+      text-align: center;
+      padding: 2rem 0;
     }
 
-    .contact-form button:hover {
-      background-color: #45a049;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to BaavPodhu.me!</h1>
-    <p>Your next digital destination is in the making. Stay tuned for what’s coming!</p>
-    <button class="btn" onclick="notifyMe()">Notify Me</button>
 
-    <h2>Features</h2>
-    <div class="features">
-      <div>
-        <h3>Innovative Design</h3>
-        <p>Experience a modern and creative design to explore new ideas.</p>
-      </div>
-      <div>
-        <h3>Responsive Layout</h3>
-        <p>Seamlessly adapt to any device, providing a great experience everywhere.</p>
-      </div>
-      <div>
-        <h3>Fast Performance</h3>
-        <p>Enjoy blazing fast speeds with optimized performance.</p>
-      </div>
-      <div>
-        <h3>Easy Navigation</h3>
-        <p>Effortlessly find what you need with intuitive navigation.</p>
+  <!-- Hero Section -->
+  <section class="hero bg-primary text-light">
+    <div class="container text-center">
+      <h1>Welcome to BaavPodhu.me</h1>
+      <p>Your next digital adventure awaits. Stay tuned for something amazing!</p>
+      <a href="#features" class="btn btn-primary">Explore More</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Exciting Features</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card text-center p-4">
+            <img src="https://via.placeholder.com/80" class="card-img-top mx-auto" alt="Feature 1">
+            <div class="card-body">
+              <h5 class="card-title">Modern Design</h5>
+              <p class="card-text">Experience sleek, modern aesthetics designed to make your digital journey enjoyable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card text-center p-4">
+            <img src="https://via.placeholder.com/80" class="card-img-top mx-auto" alt="Feature 2">
+            <div class="card-body">
+              <h5 class="card-title">Fast & Responsive</h5>
+              <p class="card-text">Access from any device with ultra-fast loading times and a fully responsive layout.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card text-center p-4">
+            <img src="https://via.placeholder.com/80" class="card-img-top mx-auto" alt="Feature 3">
+            <div class="card-body">
+              <h5 class="card-title">User Friendly</h5>
+              <p class="card-text">Navigate with ease and enjoy an intuitive design built just for you.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <h2>Advantages</h2>
-    <div class="advantages">
-      <div>
-        <h3>User Friendly</h3>
-        <p>Designed with simplicity and ease of use in mind.</p>
-      </div>
-      <div>
-        <h3>Secure Platform</h3>
-        <p>Your data and privacy are protected with top-notch security measures.</p>
-      </div>
-      <div>
-        <h3>Scalable</h3>
-        <p>Built to grow with you, whatever your needs may be.</p>
-      </div>
-      <div>
-        <h3>24/7 Support</h3>
-        <p>Get help whenever you need it, day or night.</p>
+  <!-- Advantages Section -->
+  <section class="advantages bg-light text-dark">
+    <div class="container">
+      <h2>Why Choose Us?</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card p-4 text-center">
+            <h5 class="card-title">Enhanced Security</h5>
+            <p class="card-text">Your data is safe with industry-leading security measures protecting every interaction.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card p-4 text-center">
+            <h5 class="card-title">24/7 Support</h5>
+            <p class="card-text">Our team is here to help, anytime you need it, day or night.</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="contact-form">
+  <!-- Contact Section -->
+  <section class="contact-form bg-white text-dark">
+    <div class="container">
       <h2>Get in Touch</h2>
-      <p>Have questions or want to learn more? Drop us a message!</p>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button onclick="submitForm()">Send Message</button>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Send Message</button>
+      </form>
     </div>
+  </section>
 
-    <footer>© 2024 BaavPodhu.me</footer>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2024 BaavPodhu.me - All Rights Reserved</p>
+    </div>
+  </footer>
 
-  <script>
-    function notifyMe() {
-      alert("Thanks for your interest! Stay tuned for updates.");
-    }
-
-    function submitForm() {
-      alert("Thanks for reaching out! We’ll get back to you soon.");
-    }
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
