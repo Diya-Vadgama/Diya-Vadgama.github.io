@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BaavPodhu.me | Your Next Digital Destination</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 1em;
+    }
+
+    .container {
+      max-width: 800px;
+      background: #fff;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .btn {
+      padding: 0.8em 2em;
+      font-size: 1em;
+      color: #fff;
+      background-color: #ff6b6b;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: block;
+      margin: 1em auto;
+    }
+
+    .btn:hover {
+      background-color: #ff4e4e;
+    }
+
+    .features, .advantages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      margin-top: 1.5em;
+    }
+
+    .features div, .advantages div {
+      background-color: #f8f8f8;
+      padding: 1em;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    .contact-form {
+      margin-top: 2em;
+      text-align: center;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin: 0.5em 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      padding: 0.8em 2em;
+      font-size: 1em;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to BaavPodhu.me!</h1>
+    <p>Your next digital destination is in the making. Stay tuned for what’s coming!</p>
+    <button class="btn" onclick="notifyMe()">Notify Me</button>
+
+    <h2>Features</h2>
+    <div class="features">
+      <div>
+        <h3>Innovative Design</h3>
+        <p>Experience a modern and creative design to explore new ideas.</p>
+      </div>
+      <div>
+        <h3>Responsive Layout</h3>
+        <p>Seamlessly adapt to any device, providing a great experience everywhere.</p>
+      </div>
+      <div>
+        <h3>Fast Performance</h3>
+        <p>Enjoy blazing fast speeds with optimized performance.</p>
+      </div>
+      <div>
+        <h3>Easy Navigation</h3>
+        <p>Effortlessly find what you need with intuitive navigation.</p>
+      </div>
+    </div>
+
+    <h2>Advantages</h2>
+    <div class="advantages">
+      <div>
+        <h3>User Friendly</h3>
+        <p>Designed with simplicity and ease of use in mind.</p>
+      </div>
+      <div>
+        <h3>Secure Platform</h3>
+        <p>Your data and privacy are protected with top-notch security measures.</p>
+      </div>
+      <div>
+        <h3>Scalable</h3>
+        <p>Built to grow with you, whatever your needs may be.</p>
+      </div>
+      <div>
+        <h3>24/7 Support</h3>
+        <p>Get help whenever you need it, day or night.</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <p>Have questions or want to learn more? Drop us a message!</p>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button onclick="submitForm()">Send Message</button>
+    </div>
+
+    <footer>© 2024 BaavPodhu.me</footer>
+  </div>
+
+  <script>
+    function notifyMe() {
+      alert("Thanks for your interest! Stay tuned for updates.");
+    }
+
+    function submitForm() {
+      alert("Thanks for reaching out! We’ll get back to you soon.");
+    }
+  </script>
+</body>
+</html>
