@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorry Diyuuu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
         /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
             margin: 0;
             padding: 0;
@@ -23,23 +30,23 @@
             background: linear-gradient(135deg, #ff6f61, #ffb3b3);
             color: white;
             text-align: center;
-            padding: 150px 20px;
+            padding: 120px 20px;
             position: relative;
             z-index: 1;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .hero-section h1 {
-            font-size: 4.5rem;
+            font-size: 4rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            animation: fadeIn 1.5s ease-in-out;
             font-family: 'Playfair Display', serif;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .hero-section p {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-top: 20px;
             animation: fadeIn 2s ease-in-out;
         }
@@ -134,57 +141,16 @@
             text-decoration: underline;
         }
 
-        /* Heart Icon Effect */
-        .heart-icon {
-            font-size: 5rem;
-            position: fixed;
-            right: 15px;
-            bottom: 5%;
-            z-index: 9999;
-            color: #ff6f61;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            animation: pulse 1.5s infinite;
-        }
-
-        .heart-icon:hover {
-            transform: scale(1.3);
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
         /* Floating Heart Animation */
         .heart-animation {
-            position: absolute;
-            bottom: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 8rem;
+            position: fixed;
+            right: 20px;
+            bottom: 15%;
+            font-size: 6rem;
             color: #ff6f61;
             opacity: 0.8;
             animation: floatUp 4s ease-in-out infinite;
+            z-index: 999;
         }
 
         @keyframes floatUp {
@@ -195,12 +161,24 @@
 
             50% {
                 opacity: 1;
-                transform: translateY(-15px) scale(1.3);
+                transform: translateY(-15px) scale(1.2);
             }
 
             100% {
                 opacity: 0.6;
                 transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Additional Styling for Responsiveness */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn-custom {
+                padding: 12px 30px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -241,10 +219,10 @@
     <section class="testimonial-section">
         <div class="container">
             <h2 class="text-center mb-5">Your Forgiveness Means Everything</h2>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="testimonial-card">
-                        <p>"I know I haven't been myself lately, and this apology comes from the heart. Please understand that I'm working through a lot."</p>
+                        <p>"I know I haven't been myself lately, and this apology comes from the heart. Please understand that I'm working through a lot. Your forgiveness is my only hope."</p>
                         <h5>- Harshil</h5>
                     </div>
                 </div>
@@ -257,16 +235,12 @@
         <p>&copy; 2024 Harshil Anuwadia | All Rights Reserved | <a href="mailto:harshilanuwadia@braindrop.me">Contact Me</a></p>
     </footer>
 
-    <!-- Floating Heart Icon -->
-    <div class="heart-icon">
-        <i class="fas fa-heart"></i>
-    </div>
-
-    <!-- Floating Heart Animation -->
+    <!-- Floating Heart -->
     <div class="heart-animation">
         <i class="fas fa-heart"></i>
     </div>
 
+    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
