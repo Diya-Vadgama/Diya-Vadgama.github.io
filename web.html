@@ -6,11 +6,11 @@
   <title>BaavPodhu.me | Your Digital Playground</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
   <style>
-    /* Custom Styling */
+    /* Global Styling */
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f8f9fa;
       color: #343a40;
       line-height: 1.6;
@@ -29,8 +29,6 @@
       align-items: center;
       padding: 2rem;
       overflow: hidden;
-    }
-    .hero h1, .hero p {
       animation: fadeIn 1s ease-in-out;
     }
     @keyframes fadeIn {
@@ -52,9 +50,6 @@
       background-color: #343a40;
       color: #fff;
     }
-    .contact-form {
-      background-color: #f8f9fa;
-    }
     .gallery {
       background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
     }
@@ -75,13 +70,10 @@
       background-color: rgba(248, 249, 250, 0.8);
       z-index: -1;
     }
+    /* Responsive */
     @media (max-width: 767px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .hero p {
-        font-size: 1.2rem;
-      }
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.2rem; }
     }
   </style>
 </head>
@@ -126,14 +118,14 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <img src="https://images.unsplash.com/photo-1587613990000-5c31e95ee6d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Responsive Design">
+            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid mb-3" alt="Responsive Design">
             <h5>Responsive Design</h5>
             <p>Beautiful and responsive on any device or screen size.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="card p-4 text-center">
-            <img src="https://images.unsplash.com/photo-1587698505098-0bf27f3d539f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid mb-3" alt="Secure">
+            <img src="https://plus.unsplash.com/premium_photo-1676618539992-21c7d3b6df0f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2VjdXJlfGVufDB8fDB8fHww" class="img-fluid mb-3" alt="Secure">
             <h5>Secure</h5>
             <p>State-of-the-art security to protect your data and privacy.</p>
           </div>
@@ -151,78 +143,90 @@
           <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Tech Image">
         </div>
         <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1593476123056-9f27367d730d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Web Design">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded" alt="Web Design">
         </div>
         <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Creative Image">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded" alt="Security">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials py-5">
+  <section id="testimonials" class="testimonials py-5 text-dark">
     <div class="container">
-      <h2 class="text-center mb-4">Testimonials</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <h2 class="text-center mb-4">What People Say</h2>
+      <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active text-center">
-            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
-            <p>"BaavPodhu.me has transformed the way we work!"</p>
-            <p class="fw-bold">- John Doe, CEO</p>
+            <p>"An amazing digital experience! Secure, fast, and user-friendly."</p>
+            <h5 class="fw-bold">- Alex Doe</h5>
           </div>
           <div class="carousel-item text-center">
-            <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" class="d-block mx-auto rounded-circle mb-3" alt="Testimonial">
-            <p>"Incredible experience and seamless design."</p>
-            <p class="fw-bold">- Jane Smith, Designer</p>
+            <p>"BaavPodhu.me revolutionized my workflow. Highly recommended!"</p>
+            <h5 class="fw-bold">- Maria Johnson</h5>
+          </div>
+          <div class="carousel-item text-center">
+            <p>"Seamless and engaging platform. The best decision for my business."</p>
+            <h5 class="fw-bold">- Kevin Smith</h5>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Call-to-Action Section -->
-  <section class="cta">
-    <div class="container text-center">
-      <h2 class="mb-4">Ready to explore?</h2>
-      <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+  <!-- Call to Action Section -->
+  <section class="cta text-center text-light py-5">
+    <div class="container">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Take the next step with BaavPodhu.me today.</p>
+      <a href="#contact" class="btn btn-light btn-lg">Get Started</a>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact-form py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Get in Touch</h2>
-      <form class="row g-3">
+      <h2 class="text-center">Contact Us</h2>
+      <div class="row justify-content-center mt-4">
         <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Your Name" required>
+          <form action="https://formspree.io/f/myform" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
         </div>
-        <div class="col-md-6">
-          <input type="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="col-12">
-          <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </div>
-      </form>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer py-3 bg-dark text-light">
-    <div class="container">
-      <p class="mb-0">&copy; 2024 BaavPodhu.me. All Rights Reserved.</p>
+  <footer class="footer bg-dark text-light py-3">
+    <div class="container text-center">
+      <p>&copy; 2024 BaavPodhu.me. All Rights Reserved.</p>
+      <p>Made with ❤️ by Harshil Anuwadia</p>
     </div>
   </footer>
 
+  <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
