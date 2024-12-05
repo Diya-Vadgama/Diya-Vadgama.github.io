@@ -1,247 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorry Diyuuu</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <title>Love Note</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Global Styles */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
         }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #ff6f61, #ffb3b3);
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .hero-section h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-family: 'Playfair Display', serif;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .hero-section p {
-            font-size: 1.25rem;
-            margin-top: 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .btn-custom {
-            background-color: #ff6f61;
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            border: none;
-            box-shadow: 0 15px 25px rgba(255, 111, 97, 0.2);
-            transition: 0.3s ease;
-            text-transform: uppercase;
-            font-weight: 600;
-            position: relative;
-        }
-
-        .btn-custom:hover {
-            background-color: #ff4d3d;
-            box-shadow: 0 20px 40px rgba(255, 111, 97, 0.3);
-            transform: translateY(-5px);
-        }
-
-        /* Apology Section */
-        .apology-section {
-            background-color: white;
-            padding: 80px 20px;
-            margin-top: -60px;
-            border-radius: 10px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 0;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .highlight-text {
-            color: #ff6f61;
-            font-weight: bold;
-        }
-
-        /* Testimonial Section */
-        .testimonial-section {
-            background-color: #f9f9f9;
-            padding: 80px 20px;
-            transition: all 0.5s ease;
-        }
-
-        .testimonial-card {
-            background-color: #ffffff;
-            padding: 40px;
+        .love-theme {
+            max-width: 700px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: 0.3s ease;
-            position: relative;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .testimonial-card p {
-            font-size: 1.1rem;
-            color: #666;
-            font-style: italic;
-        }
-
-        .testimonial-card h5 {
-            color: #ff6f61;
-            margin-top: 20px;
-            font-weight: 700;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #222222;
-            color: white;
-            padding: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
             text-align: center;
+        }
+        .love-theme h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .love-theme p {
+            font-size: 1.3rem;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        .btn-custom {
+            background-color: #ff477e;
+            border: none;
+            padding: 12px 30px;
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
             font-size: 1rem;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
         }
-
-        .footer a {
-            color: #ff6f61;
-            text-decoration: none;
-            font-weight: bold;
+        .btn-custom:hover {
+            background-color: #ff3d73;
+            transform: scale(1.05);
         }
-
-        .footer a:hover {
-            text-decoration: underline;
+        .image-container img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
         }
-
-        /* Floating Heart Animation */
-        .heart-animation {
-            position: fixed;
-            right: 20px;
-            bottom: 15%;
-            font-size: 6rem;
-            color: #ff6f61;
-            opacity: 0.8;
-            animation: floatUp 4s ease-in-out infinite;
-            z-index: 999;
+        .heart-divider {
+            font-size: 2rem;
+            color: #ff4d88;
         }
-
-        @keyframes floatUp {
-            0% {
-                opacity: 0.6;
-                transform: translateY(0) scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: translateY(-15px) scale(1.2);
-            }
-
-            100% {
-                opacity: 0.6;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* Additional Styling for Responsiveness */
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .btn-custom {
-                padding: 12px 30px;
-                font-size: 1rem;
-            }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #ffdde1;
         }
     </style>
 </head>
-
 <body>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>Sorry Diyuuu! 💖</h1>
-            <p>Your love means the world to me, and I am deeply sorry for today. Let's make it right together.</p>
-            <a href="#apology" class="btn btn-custom">I Am Truly Sorry</a>
+    <div class="container love-theme">
+        <h1>My Dearest ❤️</h1>
+        <p>Sorry for the <strong>Vadapav</strong>! I know you love it, but the <strong>Pav</strong> was out of stock. Instead, I brought you something even better — your favorite <strong>Frankie</strong> and <strong>KitKat</strong>! 🥰</p>
+        <p class="heart-divider">💖💖💖</p>
+        <p>
+            My love, I know periods can be tough, but you are stronger than any challenge life throws at you. 
+            Whenever you feel tired or low, just remember, I am always here to support you. Whether it’s a hot water bottle, a big hug, or just my silly jokes to make you smile — you’ll never have to go through this alone. 
+            You are my queen, and your happiness means everything to me. So relax, let me pamper you, and let's get through this together. 🌸
+        </p>
+        <button class="btn-custom" onclick="showSurprise()">Click for a Surprise!</button>
+        <div class="image-container" id="surprise-container" style="display: none;">
+            <img src="https://i.imgur.com/YTDP0Lr.jpg" alt="A cute surprise">
+            <p class="mt-3">Here’s a reminder that I love you endlessly! 💕</p>
         </div>
-    </section>
-
-    <!-- Apology Section -->
-    <section class="apology-section" id="apology">
-        <div class="container">
-            <h2 class="text-center mb-4">My Heartfelt Apology</h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="lead">
-                        Sorry <span class="highlight-text">Diyuuu</span> for today's behaviour, my actions were not up to my standards. Mne nathi saru dhingu 🐣🥲 mne bov stress ane depression Thai che. Mne bov j taav che nd tonsils pan che. Hu past days thin bov stress ma chu. Maru kyai Maan nathi lagtu, Kai karva nu Maan nathi thatu bus Khali regret Thai che Mane Maru. Idk hu su Karu ik ke hu bovj change Thai gayo chu coz of various reasons 🥲.
-                    </p>
-                    <p class="lead">
-                        Hu roj rate tel lagavi ne suv chu coz atlu mathu dhuktu hoi and all. Nd loko pan mne ek ne ek j vastu repeate kre che k hu badlai gayo chu, hu Ava chu, hu tevu chu khabar nai avu lge che k koi ne hu nathi gamto. I am just lost in space somewhere where nobody can find me, not even myself 🥲. And due to all this things I am not well ❤️‍🩹.
-                    </p>
-                    <div class="text-center">
-                        <a href="#" class="btn btn-custom">Please Forgive Me</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Your Forgiveness Means Everything</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="testimonial-card">
-                        <p>"I know I haven't been myself lately, and this apology comes from the heart. Please understand that I'm working through a lot. Your forgiveness is my only hope."</p>
-                        <h5>- Harshil</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Harshil Anuwadia | All Rights Reserved | <a href="mailto:harshilanuwadia@braindrop.me">Contact Me</a></p>
-    </footer>
-
-    <!-- Floating Heart -->
-    <div class="heart-animation">
-        <i class="fas fa-heart"></i>
+    </div>
+    <div class="footer">
+        Made with ❤️ by your biggest fan!
     </div>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSurprise() {
+            const container = document.getElementById('surprise-container');
+            container.style.display = 'block';
+        }
+    </script>
 </body>
-
 </html>
