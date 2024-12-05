@@ -12,78 +12,107 @@
             color: #fff;
         }
         .love-theme {
-            max-width: 700px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            padding: 30px;
-            text-align: center;
-        }
-        .love-theme h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        .love-theme p {
-            font-size: 1.3rem;
-            margin: 20px 0;
-            line-height: 1.8;
+            background: rgba(255, 255, 255, 0.2);
         }
         .btn-custom {
             background-color: #ff477e;
-            border: none;
-            padding: 12px 30px;
             color: #fff;
             border-radius: 25px;
-            cursor: pointer;
             font-size: 1rem;
             transition: all 0.3s ease-in-out;
         }
         .btn-custom:hover {
             background-color: #ff3d73;
-            transform: scale(1.05);
         }
-        .image-container img {
-            max-width: 100%;
-            border-radius: 15px;
-            margin: 20px 0;
+        .card-custom {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: none;
         }
-        .heart-divider {
-            font-size: 2rem;
-            color: #ff4d88;
+        .card-custom h5 {
+            font-weight: bold;
         }
-        .footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #ffdde1;
+        .modal-header, .modal-footer {
+            background: #ff477e;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <div class="container love-theme">
-        <h1>My Dearest ❤️</h1>
-        <p>Sorry for the <strong>Vadapav</strong>! I know you love it, but the <strong>Pav</strong> was out of stock. Instead, I brought you something even better — your favorite <strong>Frankie</strong> and <strong>KitKat</strong>! 🥰</p>
-        <p class="heart-divider">💖💖💖</p>
-        <p>
-            My love, I know periods can be tough, but you are stronger than any challenge life throws at you. 
-            Whenever you feel tired or low, just remember, I am always here to support you. Whether it’s a hot water bottle, a big hug, or just my silly jokes to make you smile — you’ll never have to go through this alone. 
-            You are my queen, and your happiness means everything to me. So relax, let me pamper you, and let's get through this together. 🌸
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">❤️ Love Note ❤️</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 love-theme">
+        <h1 class="text-center">Dear Love ❤️</h1>
+        <p class="text-center mt-3">
+            Sorry for the <strong>Vadapav</strong>! I know you love it, but the <strong>Pav</strong> was out of stock. 
+            Instead, I brought you something even better — your favorite <strong>Frankie</strong> and <strong>KitKat</strong>! 🥰
         </p>
-        <button class="btn-custom" onclick="showSurprise()">Click for a Surprise!</button>
-        <div class="image-container" id="surprise-container" style="display: none;">
-            <img src="https://i.imgur.com/YTDP0Lr.jpg" alt="A cute surprise">
-            <p class="mt-3">Here’s a reminder that I love you endlessly! 💕</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card card-custom">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Stay Strong, My Love</h5>
+                        <p class="card-text">
+                            I know periods can be tough, but you are stronger than any challenge. I’m always here to support you with hugs, jokes, or anything else to make you smile. 🌸
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-custom">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">You’re My Queen</h5>
+                        <p class="card-text">
+                            Remember, you are my everything. So relax, let me pamper you, and let's make every day as beautiful as your smile. 💖
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Surprise Button -->
+        <div class="text-center mt-4">
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#surpriseModal">Click for a Surprise!</button>
         </div>
     </div>
-    <div class="footer">
-        Made with ❤️ by your biggest fan!
+
+    <!-- Surprise Modal -->
+    <div class="modal fade" id="surpriseModal" tabindex="-1" aria-labelledby="surpriseModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="surpriseModalLabel">A Special Surprise! 🎁</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="https://i.imgur.com/YTDP0Lr.jpg" alt="Frankie and KitKat" class="img-fluid rounded mb-3">
+                    <p>Here’s your favorite treats to make your day better! 🍫🌯</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script>
-        function showSurprise() {
-            const container = document.getElementById('surprise-container');
-            container.style.display = 'block';
-        }
-    </script>
+    <!-- Footer -->
+    <footer class="text-center mt-5 mb-3">
+        <p>Made with ❤️</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
